@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            First progect
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+          :root {
+        --main-color: #000040;
+        --bg-color: rgba(225, 225, 255, 0.8);
+        --text-color: white;
+        --button-bg: rgb(150, 0, 200);
+      }
+                *{
+                    margin:0px;
+                    padding:0px;
+                    box-sizing:border-box;
+                }        
+        
+            body{
+                background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV0-9IG5pghnA9D2l8HXBYcHtEMkjoi2-YwrSt4pOd0FlgBxqRDkn-SAY&s');
+                background-repeat:no-repeat;
+                background-position:center;
+                background-size: cover;
+              height :100%;
+              flex-direction: row;
+            }
+            .menu-toggle {
+      display: none;
+      font-size: 30px;
+      color: #000;
+      padding-left: 10px;
+      background: #0ff;
+      position: fixed;
+      top: 10px;
+      border:none;
+      left: 10px;
+      z-index: 1000;
+      cursor: pointer;
+      width:45px;
+      height :45px;
+      border-radius: 360px;
+      transition:background 0.3s ease;
+    }
+    .menu-toggle:hover {
+      background: #0cc;
+    }
+            .container{
+                display:flex;
+                height:100%;
+            }
+            
+
+
+
+
+            
+               aside {
+      background-color: #222;
+      width: 250px;
+      padding: 20px;
+      color:white;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height:1500px;
+    }
+    aside .hide{
+      transform: translatex(-100%);
+    }
+    aside #margin{
+      margin-top:37px;
+    }
+
+    aside .nav{
+    
+      text-decoration: none;
+      color: white;
+      background-color: #000040;
+      padding: 10px;
+      border-radius: 5px;
+      text-align:center;
+    }
+    aside h2 {
+        text-align:right;
+    }
+    aside .iop{
+        width:54%;
+        height:60%;
+        border-radius:50%;
+        float:center;
+        margin-top:20px;
+        margin-right:3%;
+        margin-left:4%;
+        text-decoration:none;
+        text-align:center;
+        color:white;
+        background-color:#222;
+        margin-bottom:40px;
+    }
+    aside .image{
+        text-decoration:none;
+        color :white;
+        font-size:20px;
+      
+    }
+    aside .io{
+      width:40px;
+      height:40px;
+      border-radius:360px;
+      float:left;
+      margin-left:5px;
+      margin-right:10px;
+      margin-bottom:10px;
+    }
+    aside .mage{
+      text-align:left;
+      color :white;
+      text-decoration:none;
+      font-size:15px;
+    }
+    aside #elzero{
+      margin-bottom:0px;
+      padding-top:0px;
+      text-align:center;
+
+    }
+    aside .h2{
+      text-align:left;
+      margin-left:8px;
+      margin-top:50px;
+      margin-bottom:10px;
+    }
+    aside #h3{
+      margin-top:30px;
+    }
+  
+    
+  
+            main {
+               flex:1;
+               padding:0px;
+               background-color:rgba(225,225,255,0.8);
+               overflow-y:auto;
+               text-align :center;
+            }
+            .main-content p {
+    font-size:20px;
+      text-align: center;
+    }
+            img{
+                width:300px;
+                height:300px;
+                border-radius:50%;
+                margin-left:18%;
+                margin-right:25%;
+                float:center;
+                margin-bottom:20px;
+            }
+             #label label{
+                color:black;
+                text-align:left;
+                margin:0px;
+                font-size:30px;
+                padding:0px;
+                
+            }
+            form .comment{
+                background-color:rgba(0,0,0,0.8);
+                border-radius:5px;
+                margin-top:10px;
+                margin-left:30px;
+                margin-right:30px;
+                padding :10px;
+                height :400px;
+                color :rgba(0,0,0,0.8);
+                margin-right :10px;
+            }
+            form textarea {
+            font-family:"Font Awesome 6 Free";
+            font-size:3em;
+      width:97%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color :rgba(0,0,0,0.9);
+      height :380px;
+      color:white;
+      margin-bottom:10px;
+      margin-left:15px;
+      margin-right:15px;
+    }
+    form button{
+        width:100%;
+        border-radius :40px;
+        background-color:rgb(150,0,200);
+        height:30px ;
+        font-size:20px ;
+    }
+    
+
+        footer{
+            text-align:center;
+            margin-top:0px;
+            padding:10px;
+            color:#fff;
+        }
+        @media (max-width: 500px) {
+          .menu-toggle {
+              display: block;
+          }
+          
+          aside {
+              position: fixed;
+              top: 0;
+              left: 0;
+              height: 100%;
+              z-index: 999;
+              transform: translateX(-100%);
+              width: 33.33%;
+              min-width: 160px;
+          }
+          
+          aside.open {
+              transform: translateX(0);
+          }
+          
+          .main-content {
+              padding-top: 60px;
+          }
+          .main-content p{
+            font-size:2em;
+          }
+          
+          img {
+              width: 60%;
+          }
+      }
+        </style>
+        
+            
+          
+    </head>
+    <body>
+        <div class="container">
+            <div class="menu-toggle" onclick="toggleSidebar()">&#9776;</div>
+        <aside>
+            <a id="margin"class="nav"href="http://google.com">google</a>
+            <a class="nav"href="http://youtube.com">youtube</a>               
+            <a class="nav"href="http://facebook.profile.com">facebook</a>
+            <a class="nav"href="http://instagram.com">instgrame</a>
+            <a class="nav"href="http://WhatsAppweb.com">whatsapp</a>
+            <h2>Contact With Me</h2>
+            <a class="image" align="center" href="https://www.facebook.com/profile.php?id=100079983525196"><img class="iop" src="https://lh3.googleusercontent.com/fife/ALs6j_Eld7nzwitnYDb3Gr70Hksm1hEMvq_G5J-TahmOXmRWyZqLZt0ZZ_GeXfocE8jVNEN8Phy4IYeufVLFy3dHkRFszZ9yBDUVEL8jkBIBPqk1kDcePirHvFg6oUVla4YyBq9vzS3lqr83TH4hCvqbGFhCLbmkgH-DXRNOlNiVoVIJnRK1UrWaeYFXy2VdeUlqqm7mMTKHf0aOHdgcC986eXeh4SahDpm_5ZZoPt-MeVi2tdN-CtjPLbQZrjjWpwx_kAPE78WcYtDTBb8XPTJIMmZFCnKKf464ltZZZmZFV3O-G-btV_GK9KCSdNENpsHY37Ksr5vAL2PVzyknSk38K1WjIYOP4RKQiPz9509b7T8G6Ybg1njVz-4qVMFPlgmmdf8EkYZ5LhGArXTxhPLUcZ9YEPWgHMJ58CmTG5VzrcA-rYjtPN75vBlgTVJ6HNhI6osWfJNb6orMcen2SXbuq7cYJXq-jP0LhSfsOlGUAegpM_8LP-oWcWjfJQH_EI-qd--TCAnEu5HeP1G0htfuMe7hZ9X71ppghQ0IcrJuyX2fbpeYsdANfEswOTgS0-9HqWOZZ7-HKT5nzCKUcGW2TWPbXZ-jW87Hm96pwJRD6l3IiK951nv0yQLgKaVCdnDBhtfApygSqElc3W6w11SH5unPTZavwAjNXtwW4TwThlLuEQGdKTL1vJCugvdJkoi0ndHOaWpC-Yfe1X7le3BWoU33PD37JRznX-OT1mKqr0pZJiNDRHe085b0rmmnyYaOqK_PtJAAWVmIaNNL2u6BCmflBjEvkTdwr_gxsCLXna61O48X_XoZ2_6n0QSI29T48S627itNieaN_C9Zf7Z-fgubPPrOVRAR9pLUbR0Ph0T4z7DEZKKsinvv1zA69UcGghdK2bhj-66lQTive4jvCSJenAq01XdGTf-JtP4JBmEkGLJsheLmm6jIklXQSB1afFjxT2jthf56Fg1O9hlm7B3WLpNdt5rbpw8nRjI-3YjZUcjGHkYSz7rhmK30AtikYEF7gvl7hwcjvKLronKPvut1m67wzPXOyhguoy4rioJIGsH5zfLnzKCefpe5wo0VszIDgwz4l6wMuBjip9YjLQapfC4Hd_GL5eY3lr3cMNKUpcqw3cPYhQIkOpbZ7O73Mp-T_JMOde9CBLsoEEt16BOvZm5l3vnoonF2AInDO2_nHbLz9KKEpDOjJi2I5Ik6krQscxVw0HIFXant8_8buTn-lKpvDFettWBqwVGda4CFIzCgQa4pFwP4oPpHMORzfZcmkuNT6sheCItBaMEF7syteT6GGlcrb8K_iMKxOKRVzxxSuADeoLF6d99ZjQYgJT-eb4wJLfYTT_tSNicFeRYAqgQT5tQCc5D2k3Bm1kakq82JnNm4T3b1l0KSE2lomdmjb5dq9Dx-8yRB5JXk6__PQn3TFNw6aVKt2rsF5uCg06HDWaKgg5cQ8jq6goigVDRlwfwiWRS_mt-VB4-Oc4yVK_2-akCozkkKZqq3DY2h497CPlMUKTh_sbDcxtwlgO-RvqZ4Z9AK0ozQjjHq2qs5ZdAfPG93Y53WNnVaq4TtTk2ZJFH0cWluTpfbZ4fktpeS6as-Q8GQ4nFsblqnxRv4u6afpX5cwaEEEWTD_YMM82XPg-RVrFxNxQ=w262-h196-p-k-nu">Mohamed Ahmed</a>
+            <h2 class="h2"align="left">My Teachers</h2>
+            <a  class="mage" align="left" href="https://m.youtube.com/channel/UCSNkfKl4cU-55Nm-ovsvOHQ"><img id="elzero" class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhrvWcdtkg6lBpnNK4_JIyYPbUmpWaa6gUr7CxNFw1WA&s"><strong>Elzero Web School</strong></a>
+            <a class="mage" align="left" href="https://m.youtube.com/c/GhareebElshaikh"><img class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9SMxSmc8jw6UY_lE3rJ-0OKsggB3u4Cle6ZK8YGAb_Q&s"><strong>غريب الشيخ |Ghareeb Elshekh</strong></a>
+            <a class="mage" align="left" href="https://m.youtube.com/@AbdelrahmanGamal"><img class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdodYzS7AK7T2WDH0CV5TAbyFJXBbMPmBgoMXcwqgspA&s"><strong>Abdelrahman Gamal</strong></a>
+            <a  class="mage" align="left" href="https://m.youtube.com/c/Codezilla"><img id="elzero" class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSMkdpcrCFUX8-pX0MI3itFJTcg0u9iV_RcJ1brd_PYg&s"><strong>Codzilla</strong></a>
+            <h2 id="h3" class="h2"align="left">Music</h2>
+            <a  class="mage" align="left" href="https://www.awtarika.com"><img id="elzero" class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLthmGxeyzaNHJPgCiMwZxOkM2ZOP-pAHy6uA6OrTK5g&s"><strong>Music</strong></a>
+            <a  class="mage" align="left" href="https://www.matb3aa.com"><img id="elzero" class="io" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs0ZbGKWiLrzpIHqANDxUaTYyP1iSnbjsgsrU-oLvoZw&s"><strong>Music</strong></a>
+
+        </aside>
+
+        <main class="main-content">
+        <header>
+            <img src="https://lh3.googleusercontent.com/fife/ALs6j_Eld7nzwitnYDb3Gr70Hksm1hEMvq_G5J-TahmOXmRWyZqLZt0ZZ_GeXfocE8jVNEN8Phy4IYeufVLFy3dHkRFszZ9yBDUVEL8jkBIBPqk1kDcePirHvFg6oUVla4YyBq9vzS3lqr83TH4hCvqbGFhCLbmkgH-DXRNOlNiVoVIJnRK1UrWaeYFXy2VdeUlqqm7mMTKHf0aOHdgcC986eXeh4SahDpm_5ZZoPt-MeVi2tdN-CtjPLbQZrjjWpwx_kAPE78WcYtDTBb8XPTJIMmZFCnKKf464ltZZZmZFV3O-G-btV_GK9KCSdNENpsHY37Ksr5vAL2PVzyknSk38K1WjIYOP4RKQiPz9509b7T8G6Ybg1njVz-4qVMFPlgmmdf8EkYZ5LhGArXTxhPLUcZ9YEPWgHMJ58CmTG5VzrcA-rYjtPN75vBlgTVJ6HNhI6osWfJNb6orMcen2SXbuq7cYJXq-jP0LhSfsOlGUAegpM_8LP-oWcWjfJQH_EI-qd--TCAnEu5HeP1G0htfuMe7hZ9X71ppghQ0IcrJuyX2fbpeYsdANfEswOTgS0-9HqWOZZ7-HKT5nzCKUcGW2TWPbXZ-jW87Hm96pwJRD6l3IiK951nv0yQLgKaVCdnDBhtfApygSqElc3W6w11SH5unPTZavwAjNXtwW4TwThlLuEQGdKTL1vJCugvdJkoi0ndHOaWpC-Yfe1X7le3BWoU33PD37JRznX-OT1mKqr0pZJiNDRHe085b0rmmnyYaOqK_PtJAAWVmIaNNL2u6BCmflBjEvkTdwr_gxsCLXna61O48X_XoZ2_6n0QSI29T48S627itNieaN_C9Zf7Z-fgubPPrOVRAR9pLUbR0Ph0T4z7DEZKKsinvv1zA69UcGghdK2bhj-66lQTive4jvCSJenAq01XdGTf-JtP4JBmEkGLJsheLmm6jIklXQSB1afFjxT2jthf56Fg1O9hlm7B3WLpNdt5rbpw8nRjI-3YjZUcjGHkYSz7rhmK30AtikYEF7gvl7hwcjvKLronKPvut1m67wzPXOyhguoy4rioJIGsH5zfLnzKCefpe5wo0VszIDgwz4l6wMuBjip9YjLQapfC4Hd_GL5eY3lr3cMNKUpcqw3cPYhQIkOpbZ7O73Mp-T_JMOde9CBLsoEEt16BOvZm5l3vnoonF2AInDO2_nHbLz9KKEpDOjJi2I5Ik6krQscxVw0HIFXant8_8buTn-lKpvDFettWBqwVGda4CFIzCgQa4pFwP4oPpHMORzfZcmkuNT6sheCItBaMEF7syteT6GGlcrb8K_iMKxOKRVzxxSuADeoLF6d99ZjQYgJT-eb4wJLfYTT_tSNicFeRYAqgQT5tQCc5D2k3Bm1kakq82JnNm4T3b1l0KSE2lomdmjb5dq9Dx-8yRB5JXk6__PQn3TFNw6aVKt2rsF5uCg06HDWaKgg5cQ8jq6goigVDRlwfwiWRS_mt-VB4-Oc4yVK_2-akCozkkKZqq3DY2h497CPlMUKTh_sbDcxtwlgO-RvqZ4Z9AK0ozQjjHq2qs5ZdAfPG93Y53WNnVaq4TtTk2ZJFH0cWluTpfbZ4fktpeS6as-Q8GQ4nFsblqnxRv4u6afpX5cwaEEEWTD_YMM82XPg-RVrFxNxQ=w262-h196-p-k-nu">
+        </header>
+
+    
+  <!-- <div class="sidebar">
+        <h2>القائمة</h2>
+        <ul>
+          <li>الرئيسية</li>
+          <li>حول</li>
+          <li>الخدمات</li>
+          <li>تواصل معنا</li>
+        </ul>
+      </div>-->
+        
+        
+            <h2><i>THE KING MA7</i></h2>
+            <p>Hello my names Mohamed Ahmed my famous is MA7</p>
+            <p>قلب تدنى <p>
+              <p>   بحبك تأنى  </p>
+             <p>   بحنانك تعشى </p>
+             <p>   بجمالك ترنى </p>
+               <p> و بدلالك تغنى </p>
+         <p>    فقال احلى الأشعار ترنيا </p>
+              <p>   بعقلي تعلق </p>
+            <p> و بقلبي داما ما دمت حيا </p>
+          <p>     ليلى في جمالك </p>
+          <p>   عبلة في حنانك و دلالك </p>
+           <p>   قيس في حبي لكي </p>
+      <p>  عنتر في غيرتي عليكي و تمسكي بكي </p>
+         <p>  حبا تنادت به الأشعار والأيام </p>
+             <p> حب تعلق بالأذهان </p>
+          <p>    حب تغنى </p>
+            
+            <form id="label">
+            <label><h4>Comments</h4></label>
+            </form>
+            <form class="comment" method="post">
+              <textarea placeholder="&#xf086;"></textarea>
+              <button type="button" onclick="submitComment()">>Send</button>
+          </form>
+
+
+        </main>
+    </div>
+        <footer><h5>Copyright 2021 ©</h5></footer>
+        <script>
+    function toggleSidebar() {
+      document.querySelector('aside').classList.toggle('open');
+    }
+    function submitComment() {
+    const comment = document.getElementById('commentText').value.trim();
+    if (!comment) {
+      alert("من فضلك أدخل تعليقًا أولاً.");
+    } else {
+      alert("تم إرسال تعليقك بنجاح!");
+      document.getElementById('commentText').value = "";
+    }
+  }
+  </script>
+
+    </body>
+        </html>
+         
